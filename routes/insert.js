@@ -1,5 +1,5 @@
 const express = require('express')
-const client = require('../../backend/mongo')
+const client = require('../backend/mongo')
 const router = express.Router()
 router.get('/insert/:key/:value',async (req,res)=>{
     console.log("inserting")
