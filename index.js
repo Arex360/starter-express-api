@@ -1,9 +1,9 @@
 const express = require('express')
-//const cors = require('cors')
+const cors = require('cors')
 const { root, insert, reterive } = require('./routes/routes')
 const app = express()
 
-//app.use(cors())
+app.use(cors())
 app.use(root)
 app.use(insert)
 app.use(reterive)
