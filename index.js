@@ -1,6 +1,6 @@
 const express = require('express')
 //const cors = require('cors')
-const { root, insert, reterive } = require('./api/routes/routes')
+const { root, insert, reterive } = require('./routes/routes')
 const app = express()
 
 //app.use(cors())
