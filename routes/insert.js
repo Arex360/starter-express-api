@@ -2,7 +2,7 @@ const express = require('express');
 const client = require('../backend/mongo');
 const router = express.Router();
 
-router.post('/upsert/:key/:value', async (req, res) => {
+router.post('/insert/:key/:value', async (req, res) => {
     console.log("upserting");
     const { key, value } = req.params;
     
