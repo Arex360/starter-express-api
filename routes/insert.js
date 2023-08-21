@@ -26,10 +26,10 @@ router.get('/insert/:key/:value', async (req, res) => {
         value = sha256Hash
         if (existingDocHash) {
             // Update the existing document
-            await db.collection(key).updateOne({}, { $set: { value } });
+            await db.collection('version').updateOne({}, { $set: { value } });
         } else {
             // Insert a new document
-            await db.collection(key).insertOne({ value });
+            await db.collection('version').insertOne({ value });
         }
 
         await client.close();
