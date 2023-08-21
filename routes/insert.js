@@ -22,7 +22,7 @@ router.get('/insert/:key/:value', async (req, res) => {
         }
         const existingDocHash = await db.collection('version').findOne({});
         const currentTimestamp = Date.now().toString();
-        const sha256Hash = crypto.createHash('sha256').update(currentTimestamp).digest('hex');
+        const sha256Hash = crypto.createHash('md5').update(currentTimestamp).digest('hex');
         value = sha256Hash
         if (existingDocHash) {
             // Update the existing document
